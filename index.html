@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+    <link rel="icon" type="image/png" href="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png" alt="Spotify" class="spotify-logo">
+                Albums
+            </h1>
+            <p>Discover albums by your favorite artists</p>
+        </header>
+        
+        <main>
+            <div class="search-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="artistInput" 
+                        placeholder="Enter artist name..."
+                        autocomplete="off"
+                    >
+                    <button id="searchBtn">Search Albums</button>
+                </div>
+            </div>
+
+            <div id="loadingSpinner" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Searching for albums...</p>
+            </div>
+
+            <div id="errorMessage" class="error hidden"></div>
+
+            <div id="resultsSection" class="results-section hidden">
+                <h2 id="resultsTitle"></h2>
+                <div id="albumGrid" class="album-grid"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Spotify Web API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
